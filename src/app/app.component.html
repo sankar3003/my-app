@@ -1,0 +1,14 @@
+
+<ul>
+  <li routerLink='first'>
+    First
+  </li>
+  <li routerLink='second'>Second</li>
+  <a [routerLink]="['hero']" [queryParams]="{debug:true}" style="text-decoration:dotted;" queryParamsHandling="merge" fragment="education">
+    Hero
+  </a>
+  <li routerLink='dashboard'>Dashboard</li>
+</ul>
+
+
+<router-outlet></router-outlet>
