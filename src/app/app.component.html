@@ -1,14 +1,22 @@
 
 <ul>
+
   <li routerLink='first'>
     First
   </li>
+   <!-- use alias 'msg' -->
   <li routerLink='second'>Second</li>
   <a [routerLink]="['hero']" [queryParams]="{debug:true}" style="text-decoration:dotted;" queryParamsHandling="merge" fragment="education">
     Hero
   </a>
   <li routerLink='dashboard'>Dashboard</li>
+  <li routerLink='mcontrol'>Mission Control</li>
+  <li routerLink='mode1'>Dialog</li>
+  <li routerLink='ad-banner'>Ad  Banner </li>
+  <li routerLink='config'>Config</li>
 </ul>
 
 
-<router-outlet></router-outlet>
+<router-outlet>
+
+</router-outlet>

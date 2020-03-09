@@ -1,4 +1,87 @@
-<app-second></app-second>
-<input type="text" [name]='first_name'>{{first_name}}
-<div><code>observable|async</code>:
+<!-- <!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+  margin: 20px;
+}
+.active{
+  background-color: green;
+}
+.icon-d{
+  padding: 25px;
+  color: white;
+  background-color: violet;
+  display: inline;
+  text-align: justify;
+}
+a:hover{
+  background-color: gray;
+
+}
+
+</style>
+<body>
+
+<div class="icon-d">
+  <a class="active" href="#"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-search"></i></a>
+  <a href="#"><i class="fa fa-envelope"></i></a>
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
+</div>
+
+</body>
+</html>
+
+ -->
+
+
+
+
+ <p>The hero's birthday is {{ birthday | date:format | uppercase }}</p>
+  <button (click)="toggleFormat()">Toggle Format</button>
+<br>
+<h2>Power Boost Calculator</h2>
+<div>Normal power: <input [(ngModel)]="power"></div>
+<div>Boost factor: <input [(ngModel)]="factor"></div>
+
+<br>
+<p>
+  Super Hero Power: {{power | exponentialStrength: factor}}
+</p>
+<br>
+<p>
+  {{ user.name | reverseStr }}
+</p>
+<br>
+<br>
+{{ user.name | useLesspipe:"Mr.":"the great" : "person"}}
+
+<br>
+
+
+<input type="number" [(ngModel)]='num1' #n  placeholder="Enter numeber">
+<p>you Enter the numer get Incremented by 1 the vakue is {{num}}</p>
+
+<img [src]="url | alternate:'http://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg'"/>
+
+<input type="file" [(ngModel)]='file1'>
+{{ file1 | filesize }}
+
+
+<br>
+<br>
+<div>
+  <input type="text" [(ngModel)]="fname" #name> {{fname}}
+</div>
+<button (click)=adduser(name.value)>Adduser</button>
+<p>
+  {{fname | append :'N' }}
+</p>
+<br>
+<div *ngFor="let usr of users | filter :'gender':'male' ">
+{{usr.name}}
+</div>
 
