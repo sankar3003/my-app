@@ -1,0 +1,8 @@
+.dropdown-content{
+  display: block;
+}
+
+div.dropdown-content:hover{
+  color: red;
+  display: block;
+}

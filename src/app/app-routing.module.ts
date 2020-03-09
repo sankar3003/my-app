@@ -6,7 +6,11 @@ import { SecondComponent } from './second/second.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessageComponent } from './message/message.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { DialogComponent } from './dialog/dialog.component';
+import { Mode1Component } from './mode1/mode1.component';
+import { AdDirective } from './ad.directive';
+import { AdBannerComponent } from './ad-banner/ad-banner.component';
+import { ConfigComponent } from './config/config.component';
 
 const routes: Routes = [
 
@@ -17,10 +21,21 @@ const routes: Routes = [
 {path:'detail/:id', component:HeroDetailComponent},
 {path:'message', component:MessageComponent},
 { path: 'dashboard', component: DashboardComponent },
+{path:"mode1",component:Mode1Component},
+{path:"ad-banner",component:AdBannerComponent},
+{path:"config",component:ConfigComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+   imports: [
+      RouterModule.forRoot(routes)
+   ],
+   exports: [
+      RouterModule
+   ],
+   declarations: [
+      AdDirective,
+
+   ]
 })
 export class AppRoutingModule { }
